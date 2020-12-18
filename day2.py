@@ -23,7 +23,6 @@ def part2(inp_list):
     return count
 
 
-
 if __name__ == "__main__":
     inp_f = open("day2.txt", "r")
     inp = inp_f.read()
