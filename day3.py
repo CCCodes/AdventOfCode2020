@@ -1,4 +1,9 @@
-def part1(inp_list, right_inc, down_two=False):
+inp_f = open("input/day3.txt", "r")
+inp = inp_f.read()
+inp_list = [line for line in inp.split("\n") if line != ""]
+
+
+def part1(right_inc, down_two=False):
     pos = 0
     size = len(inp_list[0])
     trees = 0
@@ -11,16 +16,13 @@ def part1(inp_list, right_inc, down_two=False):
     return trees
 
 
-def part2(inp_list):
+def part2():
     acc = 1
     for i in range(1, 8, 2):
-        acc *= part1(inp_list, i)
-    acc *= part1(inp_list, 1, True)
+        acc *= part1(i)
+    acc *= part1(1, True)
     return acc
 
 
 if __name__ == "__main__":
-    inp_f = open("day3.txt", "r")
-    inp = inp_f.read()
-    inp_list = [line for line in inp.split("\n") if line != ""]
-    print(part2(inp_list))
+    print(part2())

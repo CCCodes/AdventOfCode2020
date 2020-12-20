@@ -1,4 +1,9 @@
-def part1(inp_list):
+inp_f = open("input/day1.txt", "r")
+inp = inp_f.read()
+inp_list = [int(num_str) for num_str in inp.split("\n") if num_str != ""]
+
+
+def part1():
     for num in inp_list:
         if num == 1010:
             print("1010, double check")
@@ -6,7 +11,7 @@ def part1(inp_list):
             return num * (2020 - num)
 
 
-def part2(inp_list):
+def part2():
     for i, num1 in enumerate(inp_list):
         for j, num2 in enumerate(inp_list):
             if j == i:
@@ -23,7 +28,4 @@ def part2(inp_list):
 
 
 if __name__ == "__main__":
-    inp_f = open("day1_1.txt", "r")
-    inp = inp_f.read()
-    inp_list = [int(num_str) for num_str in inp.split("\n") if num_str != ""]
-    print(part2(inp_list))
+    print(part2())

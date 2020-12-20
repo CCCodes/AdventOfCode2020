@@ -1,4 +1,9 @@
-def part1(inp_list):
+inp_f = open("input/day2.txt", "r")
+inp = inp_f.read()
+inp_list = [line for line in inp.split("\n") if line != ""]
+
+
+def part1():
     count = 0
     for line in inp_list:
         parts = line.split(" ")
@@ -11,7 +16,7 @@ def part1(inp_list):
     return count
 
 
-def part2(inp_list):
+def part2():
     count = 0
     for line in inp_list:
         parts = line.split(" ")
@@ -24,7 +29,4 @@ def part2(inp_list):
 
 
 if __name__ == "__main__":
-    inp_f = open("day2.txt", "r")
-    inp = inp_f.read()
-    inp_list = [line for line in inp.split("\n") if line != ""]
-    print(part2(inp_list))
+    print(part2())

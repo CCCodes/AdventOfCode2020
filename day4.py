@@ -1,7 +1,12 @@
 import re
 
 
-def part1(inp_list):
+inp_f = open("input/day4.txt", "r")
+inp = inp_f.read()
+inp_list = [line for line in inp.split("\n\n") if line != ""]
+
+
+def part1():
     req_fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
     valid = 0
     for passport in inp_list:
@@ -15,7 +20,7 @@ def part1(inp_list):
     return valid
 
 
-def part2(inp_list):
+def part2():
     req_fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
     ecl_opts = ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth']
     valid = 0
@@ -93,7 +98,4 @@ def part2(inp_list):
 
 
 if __name__ == "__main__":
-    inp_f = open("day4.txt", "r")
-    inp = inp_f.read()
-    inp_list = [line for line in inp.split("\n\n") if line != ""]
     print(part2(inp_list))
