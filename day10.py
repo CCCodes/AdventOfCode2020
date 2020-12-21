@@ -20,7 +20,6 @@ def part1():
 def part2():
     inp_list.sort()
     max_volts = inp_list[-1]
-    # print(max_volts)
     idx = 0
     memo_table = [1]
     for i in range(1, max_volts+1):
@@ -29,10 +28,9 @@ def part2():
         else:
             memo_table.append(sum(memo_table[-3:]))
             idx += 1
-    # print(memo_table)
     return memo_table[-1]
 
 
 if __name__ == "__main__":
-    # print(part1())
+    print(part1())
     print(part2())
