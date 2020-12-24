@@ -65,7 +65,7 @@ def part2():
     enum_valid_fields = list(enumerate(valid_fields))
     enum_valid_fields.sort(key=sort_valid_fields)
 
-    final_fields = {}  # maps field index to index in ticket of field
+    final_fields = {}  # maps field index to index of field in ticket
     for i, fields in enum_valid_fields:
         for field in fields:
             if field not in final_fields:

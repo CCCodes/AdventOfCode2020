@@ -1,6 +1,6 @@
 import numpy as np
 
-inp_f = open("input/day14.txt", "r")
+inp_f = open("input/test.txt", "r")
 inp = inp_f.read()
 inp_list = [line for line in inp.split("\n") if line != ""]
 
