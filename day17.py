@@ -4,8 +4,7 @@ import numpy as np
 
 
 inp_f = open("input/day17.txt", "r")
-inp = inp_f.read()
-# inp = ".#.\n..#\n###\n"
+inp = inp_f.read()s
 inp_list = [line for line in inp.split("\n") if line != ""]
 
 
