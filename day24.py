@@ -94,10 +94,12 @@ def part2():
             if min_y < 0:
                 y -= min_y
             arr[x, y] = 1
-    tiles_arr = np.zeros((max_x - min_x + 201, max_y - min_y + 201))
-    tiles_arr[100:-100, 100:-100] = arr
     
-    for _ in range(100):
+    num_rounds = 100
+    tiles_arr = np.zeros((arr.shape[0] + num_rounds * 2, arr.shape[1] + num_rounds * 2))
+    tiles_arr[num_rounds:-num_rounds, num_rounds:-num_rounds] = arr
+    
+    for _ in range(num_rounds):
         tiles_arr = flip_tiles(tiles_arr)
     return np.sum(tiles_arr)
             
